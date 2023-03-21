@@ -1,0 +1,343 @@
+@font-face {
+    font-family: Itim;
+    src: url(../media/fonts/Itim/Itim-Regular.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+
+:root {
+
+    --colorFaviconGradient: radial-gradient(50% 50% at 50% 50%, #AB71E4 61.46%, #FFBABA 100%);
+    --colorGradientCenter: radial-gradient(50% 50% at 50% 50%, #E96A6A 26.04%, #AB71E4 53.12%, #AB71E4 71.35%, #FFBABA 100%);
+    --colorGradientAlt: radial-gradient(50% 50% at 50% 50%, #2A9D8F 72.92%, #F8F4E4 100%);
+    --colorCharcoal: #264653;
+    --colorPersianGreen: #2A9D8F;
+    --colorSaffron: #E9C46A;
+    --colorSandyBrown: #F4A261;
+    --colorCosmicLatte: #F8F4E4;
+    --colorBurntSienna: #E76F51;
+    --colorLavender: #AB71E4;
+    --colorTiffanyBlue: #77C8BE;
+    --colorLightCoral: #E96A6A;
+    --colorMelon: #FFBABA;
+    --colorTiffanyBlueTransparent: #77C8BE7a;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--colorCosmicLatte);
+}
+
+.body {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: var(--colorCharcoal);
+    display: unset;
+    text-decoration: none;
+    transition: 250ms ease-out;
+}
+
+.logo {
+    align-items: center;
+    margin-right: 20px;
+}
+
+svg.logo>path {
+    transition: all 250ms ease-out;
+}
+
+svg.logo:hover>path#bg {
+    fill: var(--colorPersianGreen);
+}
+
+svg.logo:hover>path#bg {
+    fill: var(--colorPersianGreen);
+}
+
+svg.logo radialGradient>stop {
+    transition: all 250ms ease-out;
+}
+
+svg.logo:hover radialGradient>stop#a0,
+svg.logo:hover radialGradient>stop#a2,
+svg.logo:hover radialGradient>stop#a4 {
+    stop-color: var(--colorPersianGreen);
+}
+
+svg.logo:hover radialGradient>stop#b0,
+svg.logo:hover radialGradient>stop#b2,
+svg.logo:hover radialGradient>stop#c4 {
+    stop-color: var(--colorCosmicLatte);
+}
+
+svg.logo:hover radialGradient>stop#a1,
+svg.logo:hover radialGradient>stop#a3 {
+    stop-color: var(--colorLavender);
+}
+
+svg.logo:hover radialGradient>stop#b1,
+svg.logo:hover radialGradient>stop#b3 {
+    stop-color: var(--colorMelon);
+}
+
+svg.logo:hover radialGradient>stop#b4 {
+    stop-color: var(--colorTiffanyBlue);
+}
+
+
+header nav>span {
+    height: auto;
+    width: auto;
+    text-align: center;
+    column-gap: 0;
+}
+
+header nav {
+    font-size: 18px;
+    height: auto;
+    width: 100%;
+    align-items: center;
+}
+
+header a {
+    color: var(--colorCharcoal);
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.container-custom {
+    padding: 0 10%;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.grid {
+    display: grid;
+}
+
+.navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-evenly;
+    --headerHeight: height;
+}
+
+.item-block {
+    color: var(--colorCharcoal);
+    transition: 250ms ease-out;
+    margin: auto;
+    padding: 5px 15px;
+}
+
+.nav-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transition: all 250ms ease-out;
+    width: max-content;
+    height: 100%;
+}
+
+.nav-item:after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 100%;
+    bottom: 0;
+    left: 50%;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--colorTiffanyBlue);
+    transition: all 250ms ease-out;
+}
+
+.nav-item:hover:after {
+    width: 100%;
+    left: 0;
+    border-bottom-width: 4px;
+}
+
+.block-underline {
+    border-bottom: 2px solid var(--colorLavender);
+}
+
+.cart,
+.search {
+    margin: auto;
+    height: max-content;
+    width: max-content;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: all 250ms ease-out;
+}
+
+.cart:hover {
+    background-color: var(--colorTiffanyBlueTransparent);
+}
+
+.button-ext,
+.button-def {
+    position: relative;
+    transition: all 250ms ease-out;
+    font-size: medium;
+    font-weight: normal;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+}
+
+
+.button-def {
+    height: max-content;
+    width: max-content;
+    padding: 5px 10px;
+}
+
+.button-ext {
+    padding: 10px 20px;
+}
+
+.button-bg {
+    background-color: var(--colorPersianGreen);
+    color: var(--colorCosmicLatte);
+}
+
+.button-bg:hover {
+    background-color: var(--colorTiffanyBlue);
+    color: var(--colorCosmicLatte);
+}
+
+.button-header:hover {
+    background-color: var(--colorTiffanyBlueTransparent);
+}
+
+.button-cancel:hover {
+    background-color: var(--colorLightCoral);
+}
+
+.button-accept {
+    position: relative;
+}
+
+.button-accept:after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 100%;
+    bottom: 0;
+    left: 50%;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--colorPersianGreen);
+    transition: all 250ms ease-out;
+}
+
+.button-accept:hover:after {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-bottom-width: 4px;
+}
+
+.margin-rs {
+    margin-right: 8px;
+}
+
+.margin-rm {
+    margin-right: 24px;
+}
+
+.gap-s {
+    column-gap: 5px;
+}
+
+.from-control {
+    border-color: var(--colorPersianGreen);
+}
+
+.slide {
+    margin: 0;
+}
+
+.carousel {
+    margin: 0;
+}
+
+.carousel-inner {
+    margin: auto;
+    display: block;
+    max-height: 800px;
+    max-width: 500px;
+}
+
+.carousel-inner h3,
+.carousel-inner p,
+.carousel-indicators,
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    border-radius: 20px;
+    background-color: #5a5a5aaa;
+    margin: 0 auto;
+}
+
+.carousel-inner h3 {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.carousel-inner p {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+footer>nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+footer h3 {
+    min-height: 52px;
+    text-align: center;
+}
+
+footer li {
+    color: var(--colorCharcoal);
+    transition: all 250ms ease-out;
+    width: max-content;
+}
+
+footer li:hover {
+    text-decoration: underline;
+}
+
+footer a {
+    display: block;
+    text-decoration: none;
+    width: min-content;
+}
